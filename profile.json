@@ -1,0 +1,18 @@
+{
+    "meta": {
+        "version": "*",
+        "url": ""
+    },
+
+    "name": "Your Name",
+    
+    "bio": "This is just an example. I don't really exist.",
+
+    "interests": ["JSON", "Javascript", "Internet"],
+
+    "picture": "http://i.pravatar.cc/300",
+
+    "posts": [
+        {}
+    ]
+}
