@@ -1,6 +1,6 @@
 # Profile
 
-Profile is a self-hosted network where individuals look after their own data.
+Profile is a self-hosted network for individuals who own their data.
 
 Put simply, a Profile is a JSON file that is hosted on a web server. Each file represents the profile of an individual. From their profile, an individual can reveal as much or as little as they wish about themselves. They can also attach links to pictures, write simple text posts, update their bio and list their hobbies and fellow profile friends.
 
