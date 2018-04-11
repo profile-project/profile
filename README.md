@@ -59,7 +59,7 @@ The `posts` field must be an array of objects. Each object should following the 
 ## Optional Fields
 Profilers are encouraged to use the following fields to make the most out of their Profile, however, they are not required.
 
-### Nickname
+#### Nickname
 The `nickname` field must be a string representing an informal nickname that the Profiler wishes to be shown on their profile.
 
 ```json
