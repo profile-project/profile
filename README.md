@@ -11,7 +11,7 @@ The core of the standard is designed to be as small and minimal as possible. Thi
 ## Creating a Profile
 Creating a profile is as simple as writing a text file. Using a text editor such as VS Code, Atom etc. simple create a new file called `profile.json`. The file must be correctly formatted in JSON, so if you're unfamiliar then you should [read about it](https://www.w3schools.com/js/js_json_syntax.asp) first.
 
-## Mandatory Fields
+## Required Fields
 The following fields **must** be included within your Profile JSON file to be a valid Profile.
 
 #### Meta
