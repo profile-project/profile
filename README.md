@@ -1,8 +1,8 @@
 # Profile
 
-Profile is a simple standard for a new web-based network where users are responsible for maintaining their own profile, data and posts.
+Profile is a self-hosted network where individuals look after their own data.
 
-Simply, a Profile is a JSON file that is hosted on a web server. Each file represents the profile of an individual. From their profile, an individual can reveal as much or as little as they wish about themselves. They can also attach links to pictures, write simple text posts, update their bio and list their hobbies and fellow profile friends.
+Put simply, a Profile is a JSON file that is hosted on a web server. Each file represents the profile of an individual. From their profile, an individual can reveal as much or as little as they wish about themselves. They can also attach links to pictures, write simple text posts, update their bio and list their hobbies and fellow profile friends.
 
 Profilers interact through a browser extension. From the extension, Profilers are able to subscribe to other Profilers to receive updates.
 
@@ -54,9 +54,19 @@ The `interests` field must be an array of strings each labelling an interest of 
 ```
 
 #### Posts
-The `posts` field must be an array of objects. Each object should following the post structure outlined [below](/#post). The post array can be empty. 
+The `posts` field must be an array of objects. Each object should following the post structure outlined [below](#post). The post array can be empty. 
 
 ## Optional Fields
+Profilers are encouraged to use the following fields to make the most out of their Profile, however, they are not required.
+
+### Nickname
+The `nickname` field must be a string representing an informal nickname that the Profiler wishes to be shown on their profile.
+
+```json
+{
+    "nickname": "007"
+}
+```
 
 #### Picture
 The `picture` field must be a string representing a URL that points to an image file. This file should represent your profile. For example, it could be a picture of yourself or a symbol...
