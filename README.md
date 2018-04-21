@@ -132,7 +132,9 @@ A post is an object that should be used within the `posts` field array. Each obj
 
 ## Example
 
-```json
+Note: the comments in the `profile.json` below are invalid json so must be removed if being used in an actual profile.
+
+```javascript
 
 {
     // This is just required, sorry
@@ -140,7 +142,7 @@ A post is an object that should be used within the `posts` field array. Each obj
         "url": ""
     },
 
-    // Your full name (or any name!)
+    // Your full name, or a name
     "name": "Joe Bloggs",
 
     // Some kind of nickname
@@ -173,7 +175,6 @@ A post is an object that should be used within the `posts` field array. Each obj
     "posts": {}
 }
 ```
-
 
 ## Contributing
 If you'd like to contribute ideas to the standard, design work or just become a community member, tweet me [@JesseTheSibley](https://twitter.com/jessethesibley) or leave an issue and maybe we'll start a Slack.
