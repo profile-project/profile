@@ -117,6 +117,7 @@ The `following` field must be an array containing URLs pointing to other `profil
 {
     "following": ["https://winegum.netlify.com/profile.json"]
 }
+```
 
 <h2 name="post">A Post</h2>
 A post is an object that should be used within the `posts` field array. Each object must contain a `content` field and `timestamp` field. Optionally a post can contain an `link` field, and a `tags` field. The `content` field must be a string that is 256 characters or less, the `timestamp` field must be a number formatted as a UNIX timestamp representing the time of the post, the `link` field must be a string containing URL relating to the content of the post and the `tags` field must be an array containing strings of categories the post could be related to. For example...
