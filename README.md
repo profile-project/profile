@@ -1,10 +1,6 @@
 # Profile
 
-> Think RSS meets twitter
-
-Profile is a self-hosted, micro-blogging platform for individuals who own their data.
-
-Profile is a standard for defining `profile.json` files which are the building blocks of the Profile network.
+Profile is a self-hosted, micro-blogging platform for individuals who own their data. Profile is a standard for defining `profile.json` files which are the building blocks of the Profile network.
 
 ## Getting started
 The easiest way to get started is by creating your very own profile right [here](https://github.com/chickencoder/profile-starter)!
@@ -135,5 +131,40 @@ A post is an object that should be used within the `posts` field array. Each obj
 }
 ```
 
+## Example
+
+```json
+
+{
+    "meta": {
+        "version": "*",
+        "url": ""
+    },
+
+    "name": "Joe Bloggs",
+
+    "nickname": "JoeyB",
+
+    "bio": "Just another Profile user!",
+
+    "pitcure": "/pictures/picture.png",
+
+    "interests": ["Reading", "Jokes", "Rooibos Tea"],
+
+    "friends": {
+        "alice": "https://alicebobson.com/profile.json",
+        "bob": "https://bobaliceson.com/profile.json"    
+    },
+
+    "links": {
+        "Rooibos": "https://en.wikipedia.org/wiki/Rooibos"
+    },
+
+    "following": ["https://winegum.netlify.com/profile.json"]
+}
+
+```
+
+
 ## Contributing
-If you'd like to contribute ideas to the standard, design work or just become a community member, tweet me @JesseTheSibley or leave an issue and maybe we'll start a Slack.
+If you'd like to contribute ideas to the standard, design work or just become a community member, tweet me [@JesseTheSibley](https://twitter.com/jessethesibley) or leave an issue and maybe we'll start a Slack.
