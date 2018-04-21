@@ -27,7 +27,6 @@ The `meta` field must be an object containing two other mandatory fields: `url` 
 {
     "meta": {
         "url": "https://somewebsite.com/profile.json",
-        "version": "*"
     }
 }
 ```
@@ -136,33 +135,43 @@ A post is an object that should be used within the `posts` field array. Each obj
 ```json
 
 {
+    // This is just required, sorry
     "meta": {
-        "version": "*",
         "url": ""
     },
 
+    // Your full name (or any name!)
     "name": "Joe Bloggs",
 
+    // Some kind of nickname
     "nickname": "JoeyB",
 
+    // Tell the world about yourself
     "bio": "Just another Profile user!",
 
+    // A picture tells 1000 words
     "pitcure": "/pictures/picture.png",
 
+    // Tell us what makes you tick...
     "interests": ["Reading", "Jokes", "Rooibos Tea"],
 
+    // Who are your mates?
     "friends": {
         "alice": "https://alicebobson.com/profile.json",
         "bob": "https://bobaliceson.com/profile.json"    
     },
 
+    // Anything the world might find interesting?
     "links": {
         "Rooibos": "https://en.wikipedia.org/wiki/Rooibos"
     },
 
-    "following": ["https://winegum.netlify.com/profile.json"]
-}
+    // Who do you find interesting?
+    "following": ["https://winegum.netlify.com/profile.json"],
 
+    // Post something...
+    "posts": {}
+}
 ```
 
 
