@@ -1,12 +1,17 @@
 # Profile
 
-Profile is a self-hosted network for individuals who own their data.
+> "Think RSS meets twitter"
+
+Profile is a self-hosted micro-blogging network for individuals who own their data.
 
 Put simply, a Profile is a JSON file that is hosted on a web server. Each file represents the profile of an individual. From their profile, an individual can reveal as much or as little as they wish about themselves. They can also attach links to pictures, write simple text posts, update their bio and list their hobbies and fellow profile friends.
 
 Profilers interact through a browser extension. From the extension, Profilers are able to subscribe to other Profilers to receive updates.
 
 The core of the standard is designed to be as small and minimal as possible. This allows for interactive features and services to be built on top of the protocol making the Profile social platform extensive and fun to play with.
+
+## How can I get started?
+The easiest way to get started is by creating your very own profile right [here](https://github.com/chickencoder/profile-starter)
 
 ## Creating a Profile
 Creating a profile is as simple as writing a text file. Using a text editor such as VS Code, Atom etc. simple create a new file called `profile.json`. The file must be correctly formatted in JSON, so if you're unfamiliar then you should [read about it](https://www.w3schools.com/js/js_json_syntax.asp) first.
@@ -90,7 +95,7 @@ The `friends` field must be an object. The key of each field within the object s
 ```
 
 #### Links
-The `links` field must be an object. The key of each field within the object should be a title given to a link the the value of each key should a URL that points to any web link. For example...
+The `links` field must be an object. The key of each field within the object should be a title given to a link and the value of each key should a URL that points to any web link. For example...
 
 ```json
 {
@@ -100,6 +105,13 @@ The `links` field must be an object. The key of each field within the object sho
     }
 }
 ```
+#### Following
+The `following` field must be an array containing URLs pointing to other `profile.json` files. All valid profiles listed in this array will be shown on your feed.
+
+```json
+{
+    "following": ["https://winegum.netlify.com/profile.json"]
+}
 
 <h2 name="post">A Post</h2>
 A post is an object that should be used within the `posts` field array. Each object must contain a `content` field and `timestamp` field. Optionally a post can contain an `link` field, and a `tags` field. The `content` field must be a string that is 256 characters or less, the `timestamp` field must be a number formatted as a UNIX timestamp representing the time of the post, the `link` field must be a string containing URL relating to the content of the post and the `tags` field must be an array containing strings of categories the post could be related to. For example...
@@ -117,7 +129,5 @@ A post is an object that should be used within the `posts` field array. Each obj
 }
 ```
 
-## Where can I host my Profile?
-Thanks to the nature of the Profile format, Profiles can be hosted online for free. There are many online services that will host static files free of charge. Here a just a few...
-* [Netlify](https://netlify.com)
-* [GitHub Gists](https://gist.github.com)
+## Contributing
+If you'd like to contribute ideas to the standard, design work or just become a community member, tweet me @JesseTheSibley or leave an issue and maybe we'll start a Slack.
