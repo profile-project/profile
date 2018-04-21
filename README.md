@@ -1,21 +1,22 @@
 # Profile
 
-> "Think RSS meets twitter"
+> Think RSS meets twitter
 
-Profile is a self-hosted micro-blogging network for individuals who own their data.
+Profile is a self-hosted, micro-blogging platform for individuals who own their data.
 
+Profile is a standard for defining `profile.json` files which are what make up the Profile network.
+
+## Getting started
+The easiest way to get started is by creating your very own profile right [here](https://github.com/chickencoder/profile-starter)
+
+## What is Profile
 Put simply, a Profile is a JSON file that is hosted on a web server. Each file represents the profile of an individual. From their profile, an individual can reveal as much or as little as they wish about themselves. They can also attach links to pictures, write simple text posts, update their bio and list their hobbies and fellow profile friends.
 
 No one's data that they present on their profile is private. The nature of the network is openness so only share what you feel comfortable with sharing.
 
-Profilers interact through a browser extension. From the extension, Profilers are able to subscribe to other Profilers to receive updates.
-
 The core of the standard is designed to be as small and minimal as possible. This allows for interactive features and services to be built on top of the protocol making the Profile social platform extensive and fun to play with.
 
 [Here's an example](https://winegum.netlify.com/profile.json)
-
-## How can I get started?
-The easiest way to get started is by creating your very own profile right [here](https://github.com/chickencoder/profile-starter)
 
 ## Creating a Profile
 Creating a profile is as simple as writing a text file. Using a text editor such as VS Code, Atom etc. simple create a new file called `profile.json`. The file must be correctly formatted in JSON, so if you're unfamiliar then you should [read about it](https://www.w3schools.com/js/js_json_syntax.asp) first.
