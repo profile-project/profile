@@ -1,61 +1,60 @@
 # Profile
 
-Profile is a self-hosted, micro-blogging platform for individuals who own their data. Profile is a standard for defining `profile.json` files which are the building blocks of the Profile network.
+Profile is a self-hosted, micro-blogging platform for individuals who own their data. Profile is a standard for defining `profile.yaml` files which are the building blocks of the Profile network.
 
 ## Getting started
 The easiest way to get started is by creating your very own profile right [here](https://github.com/chickencoder/profile-starter)!
 
 ## What is Profile
-Put simply, a Profile is a JSON file that is hosted on a web server. Each file represents the profile of an individual. From their profile, an individual can reveal as much or as little as they wish about themselves. They can also attach links to pictures, write simple text posts, update their bio and list their hobbies and fellow profile friends.
+Put simply, a Profile is a YAML file that exists somewhere on the web. Each file represents the profile of an individual. From their profile, an individual can reveal as much or as little as they wish about themselves. They can also attach links to pictures, write simple text posts, update their bio and list their hobbies and fellow profile friends.
 
-No one's data that they present on their profile is private. The nature of the network is openness so only share what you feel comfortable with sharing.
+Consider your profile to be an RSS-like feed, owned, controlled by you that can be customised like an old-school geocities site and shared as publicly as a twitter feed.
 
 The core of the standard is designed to be as small and minimal as possible. This allows for interactive features and services to be built on top of the protocol making the Profile social platform extensive and fun to play with.
 
-[Checkout an example](https://winegum.netlify.com/profile.json)
+The main idea behind Profile is to make the web fun again by utilising modern web technologies (such as the JAM stack) to create a decentralised platform.
+
+[Checkout an example](https://winegum.netlify.com/profile.yaml)
 
 ## Creating a Profile
-Creating a profile is as simple as writing a text file. Using a text editor such as VS Code, Atom etc. simple create a new file called `profile.json`. The file must be correctly formatted in JSON, so if you're unfamiliar then you should [read about it](https://www.w3schools.com/js/js_json_syntax.asp) first.
+Creating a profile is as simple as writing a text file. Using a text editor such as VS Code, Atom etc. simple create a new file called `profile.yaml`. Profile uses the YAML format to represent your data which you can learn more about [here](http://yaml.org/start.html)
 
 ## Required Fields
-The following fields **must** be included within your Profile JSON file to be a valid Profile.
+The following fields **must** be included within your Profile yaml file to be a valid Profile.
 
 #### Meta
-The `meta` field must be an object containing two other mandatory fields: `url` and `version`. The `url` field must be a string formatted as a URL pointing to this json file. The `version` field must be a string representing the Profile version. This field can be left blank which will signify the very latest version of the standard. For example...
+The `meta` field must be an object containing two other mandatory fields: `url` and `version`. The `url` field must be a string formatted as a URL pointing the root directory which contains your profile.yaml file. For example...
 
-```json
-{
-    "meta": {
-        "url": "https://somewebsite.com/profile.json",
-    }
-}
+```yaml
+meta:
+    url: "https://youruser.somesite.com/"
 ```
+
+#### Me
+The `me` field contains the rest of the fields listed below. Each field, whether required or not, should be a sub-field of the `me` field.
 
 #### Name
 The `name` field must be a string containing your full name or any name you wish to use for your Profile. This field must not be blank. For example...
 
-```json
-{
-    "name": "Joe Bloggs"
-}
+```yaml
+name: "Joe Bloggs"
 ```
-
 #### Bio
 The `bio` field must be a string that is no longer than 256 characters containing a brief summary of who you are. For example...
 
-```json
-{
-    "bio": "I am just a silly example. I don't exist"
-}
+```yaml
+bio: >
+I like to make fresh salads
+and sunbathe.
 ```
-
 #### Interests
 The `interests` field must be an array of strings each labelling an interest of yours. For example...
 
-```json
-{
-    "interests": ["coffee", "cycling", "reading"]
-}
+```yaml
+interests:
+    - coffee
+    - cycling
+    - reading
 ```
 
 #### Posts
@@ -67,113 +66,87 @@ Profilers are encouraged to use the following fields to make the most out of the
 #### Nickname
 The `nickname` field must be a string representing an informal nickname that the Profiler wishes to be shown on their profile.
 
-```json
-{
-    "nickname": "007"
-}
+```yaml
+nickname: "007"
 ```
 
 #### Picture
 The `picture` field must be a string representing a URL that points to an image file. This file should represent your profile. For example, it could be a picture of yourself or a symbol...
 
-```json
-{
-    "picture": "https://somewebsite.com/someimage.jpg" 
-}
+```yaml
+picture: "https://somewebsite.com/someimage.jpg" 
 ```
 
 #### Friends
 The `friends` field must be an object. The key of each field within the object should be a name and the value of each key should be a URL to that Profiler's profile. For example...
 
-```json
-{
-    "friends": {
-        "alice": "https://alice.awebsite.org/profile.json",
-        "bob": "https://bob.somewebsite.com/profile.json"
-    }
-}
+```yaml
+friends:
+    - alice: "https://alice.awebsite.org/profile.yaml",
+    - bob: "https://bob.somewebsite.com/profile.yaml"
 ```
 
 #### Links
 The `links` field must be an object. The key of each field within the object should be a title given to a link and the value of each key should a URL that points to any web link. For example...
 
-```json
-{
-    "links": {
-        "My Github": "https://github.com/chickencoder",
-        "My Twiter": "https://github.com/jessethesibley"
-    }
-}
+```yaml
+links:
+    - Github: "https://github.com/chickencoder",
+    - Twiter: "https://github.com/jessethesibley"
 ```
 #### Following
-The `following` field must be an array containing URLs pointing to other `profile.json` files. All valid profiles listed in this array will be shown on your feed.
+The `following` field must be an array containing URLs pointing to other the root of other `profile.yaml` files. All valid profiles listed in this array will be shown on your feed.
 
-```json
-{
-    "following": ["https://winegum.netlify.com/profile.json"]
-}
+```yaml
+following: 
+    - "https://winegum.netlify.com/"
 ```
 
 <h2 name="post">A Post</h2>
 A post is an object that should be used within the `posts` field array. Each object must contain a `content` field and `timestamp` field. Optionally a post can contain an `link` field, and a `tags` field. The `content` field must be a string that is 256 characters or less, the `timestamp` field must be a number formatted as a UNIX timestamp representing the time of the post, the `link` field must be a string containing URL relating to the content of the post and the `tags` field must be an array containing strings of categories the post could be related to. For example...
 
-```json
-{
-    "posts": [
-        {
-            "content": "Hello World! This is my first post",
-            "timestamp": 0,
-            "link": "https://en.wikipedia.org/wiki/%22Hello,_World!%22_program",
-            "tags": ["Hello", "World"]
-        }
-    ]
-}
+```yaml
+posts:
+    - content: "Hello World! This is my first post"
+      timestamp: 0
+      link: "https://en.wikipedia.org/wiki/%22Hello,_World!%22_program"
+      tags: 
+        - "Hello"
+        - "World"
 ```
 
 ## Example
 
-Note: the comments in the `profile.json` below are invalid json so must be removed if being used in an actual profile.
+```yaml
+meta:
+  url: 'https://winegum.netlify.com'
 
-```javascript
+me:
+  name: "Jesse Sibley"
+  nickname: "Winegum" 
+  picture: "/pictures/profile.jpg"
+  bio: >
+    I write code, drink coffee
+    and dream data.
 
-{
-    // This is just required, sorry
-    "meta": {
-        "url": ""
-    },
+  interests:
+    - "Cycling"
+    - "Coffee"
+    - "Culture"
 
-    // Your full name, or a name
-    "name": "Joe Bloggs",
+  posts:
+    - content: "Hello World!"
+      timestamp: 123456789
 
-    // Some kind of nickname
-    "nickname": "JoeyB",
+    - content: "My Second Post"
+      timestamp: 1234567890
+      tags:
+        - "Second"
+        - "Post"
+  friends:
+    - alice: "https://alice.netlify.com"
+    - bob: "https://bob.netlify.com"
 
-    // Tell the world about yourself
-    "bio": "Just another Profile user!",
-
-    // A picture tells 1000 words
-    "pitcure": "/pictures/picture.png",
-
-    // Tell us what makes you tick...
-    "interests": ["Reading", "Jokes", "Rooibos Tea"],
-
-    // Who are your mates?
-    "friends": {
-        "alice": "https://alicebobson.com/profile.json",
-        "bob": "https://bobaliceson.com/profile.json"    
-    },
-
-    // Anything the world might find interesting?
-    "links": {
-        "Rooibos": "https://en.wikipedia.org/wiki/Rooibos"
-    },
-
-    // Who do you find interesting?
-    "following": ["https://winegum.netlify.com/profile.json"],
-
-    // Post something...
-    "posts": {}
-}
 ```
 
 ## Contributing

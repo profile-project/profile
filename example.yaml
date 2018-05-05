@@ -1,0 +1,28 @@
+meta:
+  url: 'https://winegum.netlify.com'
+
+me:
+  name: "Jesse Sibley"
+  nickname: "Winegum" 
+  picture: "/pictures/profile.jpg"
+  bio: >
+    I write code, drink coffee
+    and dream data.
+
+  interests:
+    - "Cycling"
+    - "Coffee"
+    - "Culture"
+
+  posts:
+    - content: "Hello World!"
+      timestamp: 123456789
+
+    - content: "My Second Post"
+      timestamp: 1234567890
+      tags:
+        - "Second"
+        - "Post"
+  friends:
+    - alice: "https://alice.netlify.com"
+    - bob: "https://bob.netlify.com"
