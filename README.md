@@ -149,5 +149,12 @@ me:
 
 ```
 
+## Project
+The platform is currently being developed in many areas.
+* [Profile App](https://github.com/profile-platform/profile-app) Will be a web app for following other profiles and managing your own
+* [Profile Post](https://github.com/profile-platform/profile-post) Will be a validation network for submitting and validating posts on the platform
+* [Profile Starter](https://github.com/profile-platform/profile-starter) Is a kit for getting started with hosting your profile on Netlify
+* [Profile Verify](https://github.com/profile-platform/profile-verify) Will be a library for verifying profiles for use in profile-based applications.
+
 ## Contributing
 If you'd like to contribute ideas to the standard, design work or just become a community member, tweet me [@JesseTheSibley](https://twitter.com/jessethesibley) or leave an issue and maybe we'll start a Slack.
