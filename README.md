@@ -3,7 +3,7 @@
 Profile is a self-hosted, micro-blogging platform for individuals who own their data. Profile is a standard for defining `profile.yaml` files which are the building blocks of the Profile network.
 
 ## Getting started
-The easiest way to get started is by creating your very own profile right [here](https://github.com/chickencoder/profile-starter)!
+The easiest way to get started is by creating your very own profile right [here](https://github.com/profile-platform/profile-starter)!
 
 ## What is Profile
 Put simply, a Profile is a YAML file that exists somewhere on the web. Each file represents the profile of an individual. From their profile, an individual can reveal as much or as little as they wish about themselves. They can also attach links to pictures, write simple text posts, update their bio and list their hobbies and fellow profile friends.
@@ -14,7 +14,7 @@ The core of the standard is designed to be as small and minimal as possible. Thi
 
 The main idea behind Profile is to make the web fun again by utilising modern web technologies (such as the JAM stack) to create a decentralised platform.
 
-[Checkout an example](https://winegum.netlify.com/profile.yaml)
+[Check out an example](https://winegum.netlify.com/profile)
 
 ## Creating a Profile
 Creating a profile is as simple as writing a text file. Using a text editor such as VS Code, Atom etc. simple create a new file called `profile.yaml`. Profile uses the YAML format to represent your data which you can learn more about [here](http://yaml.org/start.html)
