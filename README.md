@@ -3,7 +3,7 @@
 Profile is a self-hosted, micro-blogging platform for individuals who own their data. Profile is a standard for defining `profile.yaml` files which are the building blocks of the Profile network.
 
 ## Getting started
-The easiest way to get started is by creating your very own profile right [here](https://github.com/profile-platform/profile-starter)!
+The easiest way to get started is by creating your very own profile right [here](https://github.com/profile-project/profile-starter)!
 
 ## What is Profile
 Put simply, a Profile is a YAML file that exists somewhere on the web. Each file represents the profile of an individual. From their profile, an individual can reveal as much or as little as they wish about themselves. They can also attach links to pictures, write simple text posts, update their bio and list their hobbies and fellow profile friends.
@@ -151,10 +151,10 @@ me:
 
 ## Project
 The platform is currently being developed in many areas.
-* [Profile App](https://github.com/profile-platform/profile-app) Will be a web app for following other profiles and managing your own
-* [Profile Post](https://github.com/profile-platform/profile-post) Will be a validation network for submitting and validating posts on the platform
-* [Profile Starter](https://github.com/profile-platform/profile-starter) Is a kit for getting started with hosting your profile on Netlify
-* [Profile Verify](https://github.com/profile-platform/profile-verify) Will be a library for verifying profiles for use in profile-based applications.
+* [Profile App](https://github.com/profile-project/profile-app) Will be a web app for following other profiles and managing your own
+* [Profile Post](https://github.com/profile-project/profile-post) Will be a validation network for submitting and validating posts on the platform
+* [Profile Starter](https://github.com/profile-project/profile-starter) Is a kit for getting started with hosting your profile on Netlify
+* [Profile Verify](https://github.com/profile-project/profile-verify) Will be a library for verifying profiles for use in profile-based applications.
 
 ## Contributing
 If you'd like to contribute ideas to the standard, design work or just become a community member, tweet me [@JesseTheSibley](https://twitter.com/jessethesibley) or leave an issue and maybe we'll start a Slack.
